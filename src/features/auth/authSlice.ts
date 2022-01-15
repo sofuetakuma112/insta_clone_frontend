@@ -51,7 +51,7 @@ export const fetchAsyncUpdateProf = createAsyncThunk(
     uploadData.append("nickName", profile.nickName);
     profile.img && uploadData.append("img", profile.img, profile.img.name);
     const res = await axios.put(
-      `${apiUrl}api/profile/${profile.id}`,
+      `${apiUrl}api/profile/${profile.id}/`,
       uploadData,
       {
         headers: {
